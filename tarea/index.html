@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Operaciones aritméticas con bucle</title>
+</head>
+<body>
+	<h1>Operaciones aritméticas con bucle</h1>
+	<label for="num1">Primer número:</label>
+	<input type="number" id="num1"><br>
+	<label for="num2">Segundo número:</label>
+	<input type="number" id="num2"><br>
+	<button onclick="realizarOperaciones()">Realizar operaciones</button><br><br>
+	<p id="resultados"></p>
+	<script>
+		function realizarOperaciones() {
+			var num1 = parseInt(document.getElementById("num1").value);
+			var num2 = parseInt(document.getElementById("num2").value);
+			var resultados = "";
+			for (var i = 1; i <= 5; i++) {
+				switch(i) {
+					case 1:
+						resultados += "SUMA: " + (num1 + num2) + "<br>";
+						break;
+					case 2:
+						resultados += "RESTA: " + (num1 - num2) + "<br>";
+						break;
+					case 3:
+						resultados += "MULTIPLICACIÓN: " + (num1 * num2) + "<br>";
+						break;
+					case 4:
+						resultados += "DIVISIÓN: " + (num1 / num2) + "<br>";
+						break;
+					case 5:
+						resultados += "MOD(%): " + (num1 % num2) + "<br>";
+						break;
+				}
+			}
+			document.getElementById("resultados").innerHTML = resultados;
+		}
+	</script>
+</body>
+</html>
